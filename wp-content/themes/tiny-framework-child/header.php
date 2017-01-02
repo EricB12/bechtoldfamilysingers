@@ -126,51 +126,7 @@
 
 		</nav><!-- #site-navigation -->
 
-		<!-- Custom Header - Start -->
-
-		<?php // Tip06 - Custom headers for posts and pages
-		$header_image = get_header_image();
-		if ( function_exists( 'get_custom_header' ) ) {
-			/* We need to figure out what the minimum width should be for our featured image
-			 * This result would be the suggested width if the theme were to implement flexible widths
-			 */
-			$header_image_width = get_theme_support( 'custom-header', 'width' );
-		}
-		?>
-
-		<?php
-		/* The header image
-		 *
-		 * Check if this is a post or page, if it has a thumbnail, and if it's a big one
-		 * You can also check if it's not password protected, just add this condition: && ! post_password_required()
-		 */
-		if ( is_singular() && has_post_thumbnail( $post->ID ) &&
-				( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( $header_image_width, $header_image_width ) ) ) &&
-				$image[1] >= $header_image_width ) :
-			// Houston, we have a new header image!
-			echo get_the_post_thumbnail( $post->ID, 'custom-header-image', array(
-				'class'    => 'photo u-photo', // At this point using a work-around: https://core.trac.wordpress.org/ticket/36996#comment:3 that is added as 12.5 in functions.php
-				'id'       => 'featured-image', // Experimental! This ID (should it be #post-thumbnail ?) could be used for the itemref in the article element (in inc/semantics.php) for the Google AMP Articles Rich Snippets "Article image" validation.
-				'itemprop' => 'image',
-				) );
-		else :
-			if ( function_exists( 'get_custom_header' ) ) {
-				$header_image_width  = get_custom_header()->width;
-				$header_image_height = get_custom_header()->height;
-			}
-		?>
-
-			<?php
-			// Check to see if the header image has been removed.
-			if ( ! empty( $header_image ) ) : ?>
-
-				<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
-
-			<?php endif; // end check for removed header image ?>
-
-		<?php endif; // end check for featured image or standard header ?>
-
-		<!-- Custom Header - End -->
+		
 
 		<?php tha_header_bottom(); // custom action hook ?>
 
