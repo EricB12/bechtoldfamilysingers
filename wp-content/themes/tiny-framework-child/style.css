@@ -368,6 +368,18 @@ blockquote cite:before {
 	font-weight: bold;
 }
 
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea
+{
+    width: 100%;
+}
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"] {
+	max-width: 300px;
+}
+
 /* 4.3 Twitter Bootstrap style buttons */
 
 
