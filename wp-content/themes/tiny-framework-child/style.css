@@ -478,6 +478,8 @@ header .social-navigation {
 	color: #ff6111;
 }
 
+
+
 /* 5.3 Post, archive navigation */
 
 /* Tip27 - Uncomment next code line to disable "previous article - next article" navigation below the content of a post */
@@ -765,6 +767,18 @@ body .entry-summary-top {
 }
 */
 
+.site-footer {
+	border-top: 5px solid #000000;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	margin: 5px auto 0 auto;
+	margin: 0.3125rem auto 0 auto;
+	max-width: 960px;
+	max-width: 60rem;
+	padding: 0 0 29px 0;
+	padding: 0 0 1.8125rem 0;
+}
+
 
 /* 13.0 Media
 -------------------------------------------------------------- */
@@ -849,6 +863,21 @@ body .entry-summary-top {
 	}
 	*/
 	
+	/* Adjust the thickness and color of the borders on the main menu for the non-mobile page   */
+	.menu-top-menu-container {
+		border-top: 5px solid #000000;
+		border-bottom: 5px solid #000000;
+	}
+	
+	
+	.main-navigation li a {
+		border-bottom: 0;
+		color: #000000;
+		line-height: 3.692307692;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
+	
 	.entry-page-image {
 		float: right;
 		margin-bottom: 0;
@@ -890,6 +919,8 @@ body .entry-summary-top {
 		color: #ff6111;
 	}
 	*/
+	
+	
 	
 	
 
@@ -960,6 +991,16 @@ body .entry-summary-top {
 @media screen and (max-width: 782px) {
 	/* Small (mobile) menu */
 	/* Twitter Bootstrap .btn style */
+	
+	
+	/* Put a Divider line between the logo and the rest of the content    */
+	.site-branding {
+		padding-top: 30px;
+		padding-bottom: 12px;
+		padding-bottom: 0.75rem;
+		border-bottom: 5px solid #000000;
+	}
+	
 	.menu-toggle {
 		display: inline-block;
 		padding: 6px 12px;
@@ -988,9 +1029,9 @@ body .entry-summary-top {
 		background-image: -o-linear-gradient(top, #f4f4f4, #e6e6e6);
 		background-image: linear-gradient(top, #f4f4f4, #e6e6e6);
 		background-repeat: repeat-x;
-		border: 1px solid #ccc;
+		border: 1px solid #992a1e;
 		border-radius: 3px;
-		box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1);
+		box-shadow: 0 1px 2px #992a1e;
 		color: #5a5a5a;
 	}
 
@@ -1015,6 +1056,7 @@ body .entry-summary-top {
 	  width: 25%;
 	  min-width: 120px;
 	}
+	
 	/* From Expound css/expound.css */
 	.site-header .menu-toggle {
 		background: #3a3a3a;
@@ -1055,7 +1097,7 @@ body .entry-summary-top {
 	}
 	.main-navigation.toggled ul > .current_page_item > a,
 	.main-navigation.toggled ul > .current-menu-item > a {
-		background: #117bb8;
+		background: #992a1e;
 	}
 	
 	.template-front-page.has-post-thumbnail article {
