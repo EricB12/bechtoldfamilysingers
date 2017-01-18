@@ -870,12 +870,23 @@ body .entry-summary-top {
 	}
 	
 	
+	/*
+	Make the main menu items black
+	*/
 	.main-navigation li a {
 		border-bottom: 0;
 		color: #000000;
 		line-height: 3.692307692;
 		text-transform: uppercase;
 		white-space: nowrap;
+	}
+	
+	.main-navigation .current-menu-ancestor > a,
+	.main-navigation .current-menu-item > a,
+	.main-navigation .current_page_ancestor > a,
+	.main-navigation .current_page_item > a {
+		color: #000000;
+		font-weight: bold;
 	}
 	
 	.entry-page-image {
@@ -1001,6 +1012,12 @@ body .entry-summary-top {
 		border-bottom: 5px solid #000000;
 	}
 	
+	
+	
+	.main-navigation ul.nav-menu  {
+		text-align: left;
+	}
+	
 	.menu-toggle {
 		display: inline-block;
 		padding: 6px 12px;
@@ -1083,10 +1100,14 @@ body .entry-summary-top {
 	.main-navigation.toggled .menu-toggle {
 		background: #474747;
 	}
+	
+	/* The menu items in the mobile menu were indented too far so 
+	* had to override this property
+	*/
 	.main-navigation.toggled a {
 		color: #fff;
-		padding: 10px 40px;
-		padding: 0.625rem 2.5rem;
+		padding: 10px 16px;
+		padding: 0.625rem 1.0rem;
 		text-decoration: none;
 	}
 	.main-navigation.toggled li a {
